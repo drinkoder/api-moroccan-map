@@ -17,7 +17,7 @@ const router = new Router();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-router.get("/todos", (ctx: RouterContext) => {
+router.get("/", (ctx: RouterContext) => {
   ctx.response.body = "Hello Drinkoder !!";
 });
 
