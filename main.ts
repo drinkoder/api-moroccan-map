@@ -1,25 +1,18 @@
-import { Application } from 'https://deno.land/x/oak/mod.ts'
-import { Router } from 'https://deno.land/x/oak/mod.ts'
-import * as flags from "https://deno.land/std/flags/mod.ts";
+import { serve } from "https://deno.land/std@v0.58.0/http/server.ts";
+import * as flags from "https://deno.land/std@v0.58.0/flags/mod.ts";
 
-import todos from "./stub.ts";
-
-const {args} = Deno;
 const DEFAULT_PORT = 8080;
-const argPort = flags.parse(args).port;
+const argPort = flags.parse(Deno.args).port;
 const port = argPort ? Number(argPort) : DEFAULT_PORT;
 
-const app = new Application();
-const router = new Router();
+if (isNaN(port)) {
+  console.error("Port is not a number.");
+  Deno.exit(1);
+}
 
-app.use(router.routes());
-app.use(router.allowedMethods());
+const s = serve({ port: port });
+console.log("http://localhost:" + port);
 
-
-router.get('/todos', ({response}: {response:any})=>{
-    response.body = todos;
-});
-
-console.log(`Server is running on port ${port}`)
-
-await app.listen({ port });
+for await (const req of s) {
+  req.respond({ body: "Hello World\n" });
+}
