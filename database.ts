@@ -1,0 +1,88 @@
+const database = [
+  {
+    id: 1,
+    label_fr: "Tanger-Tetouan-Al Hoceima",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 2,
+    label_fr: "Oriental",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 3,
+    label_fr: "Fès-Meknès",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 4,
+    label_fr: "Rabat-Salé-Kénitra",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 5,
+    label_fr: "Béni Mellal-Khénifra",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 6,
+    label_fr: "Casablanca-Settat",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 7,
+    label_fr: "Marrakesh-Safi",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 8,
+    label_fr: "	Drâa-Tafilalet",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 9,
+    label_fr: "Souss-Massa",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 10,
+    label_fr: "Guelmim-Oued Noun",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 11,
+    label_fr: "Laâyoune-Sakia El Hamra",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+  {
+    id: 12,
+    label_fr: "Dakhla-Oued Ed-Dahab",
+    label_en: "",
+    label_ar: "",
+    gcode: "",
+  },
+];
+
+export { database };
